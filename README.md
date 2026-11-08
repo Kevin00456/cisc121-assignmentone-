@@ -42,4 +42,18 @@ Given a non-empty list of integers `A`, split it at a position `P` where `1 <= P
 
 **Approach:** Calculate the total sum once. Move through each valid split while updating the left sum; calculate the right sum as the total minus the left sum. Track the smallest absolute difference.
 
-**Complexity:** O(N) time and O(1) additional space, where N is the list length.
+**Complexity:** O(N) time and O(1) additional space.
+
+## Problem 4 — Frog River One
+
+**Problem source:** [Codility — Frog River One](https://app.codility.com/programmers/lessons/4-counting_elements/frog_river_one/)
+
+A frog wants to cross a river by jumping to the opposite bank at position X + 1. Leaves fall at positions recorded in array `A`, where `A[K]` is the position of a leaf at time K. Return the earliest time when every position from 1 through X has a leaf, or -1 if this never happens.
+
+**Python file:** [`frog_river_one.py`](frog_river_one.py)
+
+**Example:** `solution(5, [1, 3, 1, 4, 2, 3, 5, 4])` returns `6`.
+
+**Approach:** Use a set to remember distinct positions that have received leaves. Increase the count only when a new required position appears. Return the current time once X distinct positions are covered; otherwise return -1.
+
+**Complexity:** O(N) expected time and O(X) space, where N is the number of leaves.
