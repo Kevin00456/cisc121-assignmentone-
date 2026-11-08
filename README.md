@@ -36,6 +36,3 @@ python cyclic_rotation.py
 ### Complexity
 - **Time:** O(N), where N is the length of the list.
 - **Space:** O(N), because slicing creates a new list.
-
-## Remaining assignment work
-Add the other four selected problems as separate Python files. The assignment report should also include photos of handwritten pseudocode, commented Python code, required citations, the AI conversation link, and this repository link.
