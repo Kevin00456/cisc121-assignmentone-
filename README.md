@@ -1,7 +1,5 @@
 # CISC 121 Assignment One
 
-This repository contains Python solutions for the selected programming problems in the CISC 121 assignment.
-
 ## Problem 1 — Cyclic Rotation
 
 **Problem source:** [Codility — Cyclic Rotation](https://app.codility.com/programmers/lessons/2-arrays/cyclic_rotation/)
