@@ -24,8 +24,22 @@ A frog starts at position `X` and wants to reach or pass position `Y`. Each jump
 
 **Python file:** [`frog_jmp.py`](frog_jmp.py)
 
-**Example:** `solution(10, 85, 30)` returns `3`, because three jumps cover 90 units and reach position 100.
+**Example:** `solution(10, 85, 30)` returns `3`.
 
-**Approach:** Calculate the distance `Y - X`, divide by `D), and round up when there is a remainder. If `X >= Y`, return 0.
+**Approach:** Calculate the distance `Y - X`, divide by `D`, and round up when there is a remainder. If `X >= Y`, return 0.
 
 **Complexity:** O(1) time and O(1) additional space.
+
+## Problem 3 — Tape Equilibrium
+
+**Problem source:** [Codility — Tape Equilibrium](https://app.codility.com/programmers/lessons/3-time_complexity/tape_equilibrium/)
+
+Given a non-empty list of integers `A`, split it at a position `P` where `1 <= P < len(A)`. Find the minimum absolute difference between the sum of the left part and the sum of the right part.
+
+**Python file:** [`tape_equilibrium.py`](tape_equilibrium.py)
+
+**Example:** `solution([3, 1, 2, 4, 3])` returns `1`.
+
+**Approach:** Calculate the total sum once. Move through each valid split while updating the left sum; calculate the right sum as the total minus the left sum. Track the smallest absolute difference.
+
+**Complexity:** O(N) time and O(1) additional space, where N is the list length.
