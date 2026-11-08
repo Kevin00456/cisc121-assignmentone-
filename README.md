@@ -14,7 +14,7 @@ Given a list of integers `A` and a non-negative integer `K`, rotate the list to 
 
 **Approach:** Handle an empty list, reduce the number of rotations using `K % len(A)`, then use slicing to move the final `K` elements to the beginning.
 
-**Complexity:** O(N) time and O(N) additional space, where N is the list length.
+**Complexity:** O(N) time and O(N) additional space.
 
 ## Problem 2 — Frog Jmp
 
@@ -56,4 +56,18 @@ A frog wants to cross a river by jumping to the opposite bank at position X + 1.
 
 **Approach:** Use a set to remember distinct positions that have received leaves. Increase the count only when a new required position appears. Return the current time once X distinct positions are covered; otherwise return -1.
 
-**Complexity:** O(N) expected time and O(X) space, where N is the number of leaves.
+**Complexity:** O(N) expected time and O(X) space.
+
+## Problem 5 — Passing Cars
+
+**Problem source:** [Codility — Passing Cars](https://app.codility.com/programmers/lessons/5-prefix_sums/passing_cars/)
+
+Count pairs (P, Q) such that P < Q, A[P] = 0 (eastbound), and A[Q] = 1 (westbound). Return -1 if the number of pairs exceeds 1,000,000,000.
+
+**Python file:** [`passing_cars.py`](passing_cars.py)
+
+**Example:** `solution([0, 1, 0, 1, 1])` returns `5`.
+
+**Approach:** Scan the array once. Count eastbound cars as they appear. For each westbound car, add the number of eastbound cars already seen to the passing-pair count. Return -1 if the count exceeds one billion.
+
+**Complexity:** O(N) time and O(1) additional space.
