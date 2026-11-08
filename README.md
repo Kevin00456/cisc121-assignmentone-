@@ -1,38 +1,31 @@
 # CISC 121 Assignment One
 
-This repository contains solutions for the selected programming problems in the CISC 121 assignment.
+This repository contains Python solutions for the selected programming problems in the CISC 121 assignment.
 
 ## Problem 1 — Cyclic Rotation
 
 **Problem source:** [Codility — Cyclic Rotation](https://app.codility.com/programmers/lessons/2-arrays/cyclic_rotation/)
 
-### Problem summary
 Given a list of integers `A` and a non-negative integer `K`, rotate the list to the right by `K` positions. Each right rotation moves the last element to the front.
 
-### Python solution
-The solution is in [`cyclic_rotation.py`](cyclic_rotation.py).
+**Python file:** [`cyclic_rotation.py`](cyclic_rotation.py)
 
-It first handles an empty list, then uses `K % len(A)` to remove full rotations. Python slicing moves the final `K` elements to the beginning in one operation.
+**Example:** `solution([3, 8, 9, 7, 6], 3)` returns `[9, 7, 6, 3, 8]`.
 
-### Example
-Input:
-```python
-A = [3, 8, 9, 7, 6]
-K = 3
-```
+**Approach:** Handle an empty list, reduce the number of rotations using `K % len(A)`, then use slicing to move the final `K` elements to the beginning.
 
-Output:
-```python
-[9, 7, 6, 3, 8]
-```
+**Complexity:** O(N) time and O(N) additional space, where N is the list length.
 
-### Run the solution
-From this repository's directory, run:
+## Problem 2 — Frog Jmp
 
-```bash
-python cyclic_rotation.py
-```
+**Problem source:** [Codility — Frog Jmp](https://app.codility.com/programmers/lessons/3-time_complexity/frog_jmp/)
 
-### Complexity
-- **Time:** O(N), where N is the length of the list.
-- **Space:** O(N), because slicing creates a new list.
+A frog starts at position `X` and wants to reach or pass position `Y`. Each jump covers exactly `D` units. Return the minimum number of jumps needed.
+
+**Python file:** [`frog_jmp.py`](frog_jmp.py)
+
+**Example:** `solution(10, 85, 30)` returns `3`, because three jumps cover 90 units and reach position 100.
+
+**Approach:** Calculate the distance `Y - X`, divide by `D), and round up when there is a remainder. If `X >= Y`, return 0.
+
+**Complexity:** O(1) time and O(1) additional space.
